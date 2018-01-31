@@ -2,7 +2,7 @@
 
 public abstract class AllocatableAction
 {
-    public int AllocatedDice { get; set; }
+    public uint AllocatedDice { get; set; }
     public int DiceScore { get; set; }
     public int TurnScore { get { return DiceScore + BalanceFromPreviousTurn; }  }
     public int BalanceFromPreviousTurn { get; }
