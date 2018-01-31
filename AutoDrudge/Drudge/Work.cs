@@ -46,5 +46,30 @@ namespace Drudge
             }
         }
 
+        public int MoneyEarned
+        {
+            get
+            {
+                int money = 0;
+                if (TurnScore > 15)
+                {
+                    money = (int)AllocatedDice + 3;
+                }
+                else if (TurnScore > 12)
+                {
+                    money = (int)AllocatedDice + 2;
+                }
+                else if (TurnScore > 9)
+                {
+                    money = (int)AllocatedDice + 1;
+                }
+                else if (TurnScore >= TargetScore)
+                {
+                    money = (int)AllocatedDice;
+                }
+                return money;
+            }
+        }
+
     }
 }

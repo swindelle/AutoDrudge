@@ -18,5 +18,11 @@ namespace Drudge
         {
             get { return DiceScore - TargetScore + BalanceFromPreviousTurn; }
         }
+
+        public int LostSelfEsteem
+        {
+            get { return (BalanceAfterTurn >= 6) ? 2 : 0; }
+        }
+
     }
 }
